@@ -68,7 +68,8 @@ Key affected regions include North America, Europe, and Asia.
 
 Marker sizes correspond to affected user counts (e.g., 1326, 1174, etc.)
 
-📌 Key Insights:
+**📌 Key Insights:**
+
 🔹 Global cyber threats have affected 2 billion users, underlining the critical need for stronger digital infrastructure.
 
 🔹 Despite high defense mechanism counts, top countries like UK, Brazil, and India still experience major breaches, suggesting attackers outpace defenses.
@@ -81,7 +82,8 @@ Marker sizes correspond to affected user counts (e.g., 1326, 1174, etc.)
 
 🔹 Countries like Germany and Australia bear higher per-incident financial losses, possibly due to higher-value infrastructure targets.
 
-🛠️ Tools & Tech Used:
+**🛠️ Tools & Tech Used:**
+
 Power BI – Visual analytics and dashboard development
 
 DAX Measures – For KPI metrics and dynamic data aggregation
