@@ -1,6 +1,5 @@
 # Global-Cybersecurity-Threats
 
-🌐 Global Cyber Threats Dashboard
 
 🔎 Overview:
 
