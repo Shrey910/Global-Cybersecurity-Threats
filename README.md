@@ -7,6 +7,7 @@
 This comprehensive Power BI dashboard presents a global perspective on cyber threats, allowing analysis of key metrics across multiple countries. Users can explore data by country and year, examining the number of affected users, financial losses, defense mechanisms, and attack trends over time.
 
 ✅ Key Features:
+
 👉🏻 Country Selector (Dropdown): Allows users to filter the data by individual country or view global data (currently showing: All)
 
 👉🏻 KPIs (Top Row Cards):
