@@ -1,6 +1,7 @@
 # Global-Cybersecurity-Threats
 
 🌐 Global Cyber Threats Dashboard
+
 🔎 Overview:
 
 This comprehensive Power BI dashboard presents a global perspective on cyber threats, allowing analysis of key metrics across multiple countries. Users can explore data by country and year, examining the number of affected users, financial losses, defense mechanisms, and attack trends over time.
