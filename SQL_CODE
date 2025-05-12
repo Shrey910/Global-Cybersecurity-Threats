@@ -1,0 +1,79 @@
+CREATE DATABASE threats
+
+ALTER TABLE Cybersecurity
+ALTER COLUMN Financial_Loss_in_Million DECIMAL(10,2)
+
+
+--1 Overview of the Cybersecurity table.
+SELECT * FROM
+Cybersecurity
+
+--2 COUNT of rows 
+SELECT COUNT(*) AS Total_Rows
+FROM Cybersecurity
+
+--3 Number of attacks per country
+SELECT Country, COUNT(Attack_Type) AS Total_Attack
+FROM Cybersecurity	
+GROUP BY Country
+ORDER BY Total_Attack DESC
+
+--4 Number of attack_type
+SELECT Attack_Type, COUNT(Attack_Type) AS Total_Attack_Types
+FROM Cybersecurity
+GROUP BY Attack_Type
+ORDER BY COUNT(Attack_Type) desc
+
+--5 Target Industries
+SELECT Target_Industry, COUNT(Target_Industry) AS Most_Targetted_Industries
+FROM Cybersecurity
+GROUP BY Target_Industry
+ORDER BY Most_Targetted_Industries DESC
+
+
+--6 Number of attacks per year
+SELECT Year, COUNT(Attack_Type) AS Total_Attacks_Year
+FROM Cybersecurity
+GROUP BY Year
+ORDER BY Year
+
+--7 Average financial loss per country
+
+SELECT Country, ROUND(AVG(Financial_Loss_in_Million),2) AS Average_Loss
+FROM Cybersecurity
+GROUP BY Country
+ORDER BY Average_Loss DESC
+
+--8 Which attack has the most incident resolution time?
+SELECT Attack_Type, SUM(Incident_Resolution_Time_in_Hours) AS Total_TimeTaken_Per_Attack
+FROM Cybersecurity
+GROUP BY Attack_Type
+ORDER BY Total_TimeTaken_Per_Attack DESC
+
+--9 Defense mechanisms used often
+
+SELECT Defense_Mechanism_Used, COUNT(Defense_Mechanism_Used) AS Defense_Mechanisms_Used
+FROM Cybersecurity
+GROUP BY Defense_Mechanism_Used
+ORDER BY Defense_Mechanism_Used DESC
+
+--10 Incident resolution time over years 
+SELECT Year, SUM(Incident_Resolution_Time_in_Hours) AS Total_Resolution_Time_Over_Years
+FROM Cybersecurity
+GROUP BY Year
+ORDER BY Year 
+
+--11 Vulnerabilities Causing Highest Loss per Incident
+
+SELECT Security_Vulnerability_Type,
+       COUNT(*) AS Incidents,
+       SUM(Financial_Loss_in_Million) AS Total_Loss,
+       AVG(Financial_Loss_in_Million) AS Avg_Loss_Per_Incident
+FROM Cybersecurity
+GROUP BY Security_Vulnerability_Type
+HAVING COUNT(*) >= 3
+ORDER BY Avg_Loss_Per_Incident DESC;
+
+
+
+
